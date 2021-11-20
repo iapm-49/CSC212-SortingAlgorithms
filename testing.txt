@@ -1,0 +1,13 @@
+insertion sort:
+
+yes
+<<<<<<< HEAD
+hi
+=======
+
+Hi
+
+>>>>>>> bfb767dc254cc7a4930d33f7ec88424e65503cee
+
+
+123

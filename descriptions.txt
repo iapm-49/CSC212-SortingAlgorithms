@@ -1,1 +1,2 @@
 insertion sort:
+selection sort:

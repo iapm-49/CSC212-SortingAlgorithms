@@ -1,8 +1,6 @@
 #include <iostream>
 #include <iomanip>
 
-#this is isabella branch
-
 void insertionSort(int array[], int size){
     for(int i = 0; i<size; i++){
         int current = array[i];

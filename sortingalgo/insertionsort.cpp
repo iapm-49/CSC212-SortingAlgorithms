@@ -1,14 +1,20 @@
 #include <iostream>
 #include <iomanip>
+#include <string>
+#include <sstream>
+#include <fstream>
 #include "insertionSort.h"
 
 InsertionSort::InsertionSort(){
 
 }
 
-void readFile()
+InsertionSort::InsertionSort(std::string fileType){
+//reading the file into an array and finding the size
 
-void InsertionSort::insertionSort(int array[], int size){
+}
+
+void doTheSort(int array[], int size){
     for(int i = 0; i<size; i++){
         int current = array[i];
         int j = i-1;
@@ -19,25 +25,4 @@ void InsertionSort::insertionSort(int array[], int size){
         }
         array[j+1] = current;
     }
-
-}
-
-int main(){
-
-    int array [5] = { 16, 2, 77, 40, 12071}; 
-
-    time_t start, end;
-
-    time(&start);
-
-    insertionSort(array, 5);
-
-    time(&end);
-
-    double time_taken = double(end - start);
-
-    std::cout << "Time taken by program is : " << std::fixed
-         << time_taken << std::setprecision(5);
-    std::cout << " sec " << std::endl;
-
 }

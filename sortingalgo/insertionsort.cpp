@@ -2,7 +2,13 @@
 #include <iomanip>
 #include "insertionSort.h"
 
-void insertionSort(int array[], int size){
+InsertionSort::InsertionSort(){
+
+}
+
+void readFile()
+
+void InsertionSort::insertionSort(int array[], int size){
     for(int i = 0; i<size; i++){
         int current = array[i];
         int j = i-1;

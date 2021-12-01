@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "insertionSort.h"
 #include "mergeSort.h"
 #include "quickSort.h"
@@ -21,4 +22,55 @@ int main() {
     std::cout<< "\n" "Now select the file's property:" << "\n";
     std::cout<< "1 = Sorted" << "           " << "2 = Reversed" << "\n" << "3 = Random" << "           " << "4 = Partially Sorted" << "\n" << "Your Selection: ";
     std::cin>> fileProperty;
+
+    time_t start, end;
+
+    time(&start);
+
+    if(algorithmFileType == 1){
+        if(textFileType == 1){
+            if(fileProperty == 1){
+                
+                InsertionSort insertionSort = InsertionSort("smallSorted.txt", 100);
+                insertionSort.doTheSort();
+            }
+            else if(fileProperty == 2){
+                
+            }
+            else if(fileProperty == 3){
+
+            }
+            else{
+
+            }
+        }
+        else if(textFileType == 2){
+
+        }
+        else if(textFileType == 3){
+
+        }
+        else if(textFileType == 4){
+
+        }
+    }
+    else if(algorithmFileType == 2){
+        MergeSort mergeSort = MergeSort();
+    }
+    else if(algorithmFileType == 3){
+        QuickSort quickSort = QuickSort();
+    }
+    else if(algorithmFileType == 4){
+        CountSort countSort = CountSort();
+    }
+    
+
+    time(&end);
+
+    double time_taken = double(end - start);
+
+    std::cout << "Time taken by program is : " << std::fixed
+         << time_taken << std::setprecision(5);
+    std::cout << " sec " << std::endl;
+
 }

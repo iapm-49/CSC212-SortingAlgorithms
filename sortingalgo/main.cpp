@@ -2,9 +2,14 @@
 #include <string>
 #include "search.h"
 
-int main(int argc, char* argv[]) {
-    std::cout<< "Welcome to our Algorithm Project, please pick your File and Algorithm Type using the letters they equate to: \n";
-    std::cout<< "1 = Insertion Sort" << "               " << "2 = Small Sized File (300 Numbers)" << "\n" << "3 = Mergesort" << "               " << "4 = Medium Sized File (700 Numbers)";
-    std::string textFileType = argv[1];
-    std::string sortingAlgoType = argv[2];
+int main() {
+    int algorithmFileType;
+    int textFileType;
+    
+    std::cout<< "Welcome to our Algorithm Project, please pick your Sorting Algorithm:"
+    std::cout<< "1 = Insertion Sort" << "               " << "2 = Merge Sort" << "\n" << "3 = Quick Sort" << "               " << "4 = Count Sort";
+    std::cin<<algorithmFileType;
+    
+    std::cout<< "Now pick what size file you want:"
+    std::cout<< "1 = Small File Size(100)" << "               " << "2 = Medium File Size(500)" << "\n" << "3 = large File Size(1500)" << "               " << "4 = Extra Large File Size(8000)(not for the faint of heart)";
 }

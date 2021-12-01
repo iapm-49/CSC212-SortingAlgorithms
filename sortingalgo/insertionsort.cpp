@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include "insertionSort.h"
 
 void insertionSort(int array[], int size){
     for(int i = 0; i<size; i++){

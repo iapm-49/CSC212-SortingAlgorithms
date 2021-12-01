@@ -5,10 +5,6 @@
 #include "quickSort.h"
 #include "countSort.h"
 
-#include <iostream>
-#include <string>
-#include "search.h"
-
 int main() {
     int algorithmFileType;
     int textFileType;

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <vector>
 #include "insertionSort.h"
 #include "mergeSort.h"
 #include "quickSort.h"
@@ -23,6 +24,8 @@ int main() {
     std::cout<< "1 = Sorted" << "           " << "2 = Reversed" << "\n" << "3 = Random" << "           " << "4 = Partially Sorted" << "\n" << "Your Selection: ";
     std::cin>> fileProperty;
 
+    std::vector<int> numbers;
+
     time_t start, end;
 
     time(&start);
@@ -30,28 +33,91 @@ int main() {
     if(algorithmFileType == 1){
         if(textFileType == 1){
             if(fileProperty == 1){
-                
-                InsertionSort insertionSort = InsertionSort("smallSorted.txt", 100);
-                insertionSort.doTheSort();
+                InsertionSort insertionSort = InsertionSort("smallSorted.txt", 100, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
             }
             else if(fileProperty == 2){
-                
+                InsertionSort insertionSort = InsertionSort("smallReversed.txt", 100, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
             }
             else if(fileProperty == 3){
-
+                InsertionSort insertionSort = InsertionSort("smallRandom.txt", 100, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
             }
             else{
-
-            }
+                InsertionSort insertionSort = InsertionSort("smallPSorted.txt", 100, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }  
         }
         else if(textFileType == 2){
-
+            if(fileProperty == 1){
+                InsertionSort insertionSort = InsertionSort("mediumSorted.txt", 500, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }
+            else if(fileProperty == 2){
+                InsertionSort insertionSort = InsertionSort("mediumReversed.txt", 500, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }
+            else if(fileProperty == 3){
+                InsertionSort insertionSort = InsertionSort("mediumRandom.txt", 500, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }
+            else{
+                InsertionSort insertionSort = InsertionSort("mediumPSorted.txt", 500, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }  
         }
         else if(textFileType == 3){
-
+            if(fileProperty == 1){
+                InsertionSort insertionSort = InsertionSort("largeSorted.txt", 1500, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }
+            else if(fileProperty == 2){
+                InsertionSort insertionSort = InsertionSort("largeReversed.txt", 1500, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }
+            else if(fileProperty == 3){
+                InsertionSort insertionSort = InsertionSort("largeRandom.txt", 1500, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }
+            else{
+                InsertionSort insertionSort = InsertionSort("largePSorted.txt", 1500, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }  
         }
         else if(textFileType == 4){
-
+            if(fileProperty == 1){
+                InsertionSort insertionSort = InsertionSort("xlSorted.txt", 8000, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }
+            else if(fileProperty == 2){
+                InsertionSort insertionSort = InsertionSort("xlReversed.txt", 8000, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }
+            else if(fileProperty == 3){
+                InsertionSort insertionSort = InsertionSort("xlRandom.txt", 8000, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }
+            else{
+                InsertionSort insertionSort = InsertionSort("xlPSorted.txt", 8000, numbers);
+                insertionSort.doTheSort(numbers, numbers.size());
+                insertionSort.writeFile(numbers);
+            }  
         }
     }
     else if(algorithmFileType == 2){

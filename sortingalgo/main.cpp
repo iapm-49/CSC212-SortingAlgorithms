@@ -120,15 +120,15 @@ int main() {
             }  
         }
     }
-    else if(algorithmFileType == 2){
-        MergeSort mergeSort = MergeSort();
-    }
-    else if(algorithmFileType == 3){
-        QuickSort quickSort = QuickSort();
-    }
-    else if(algorithmFileType == 4){
-        CountSort countSort = CountSort();
-    }
+    // else if(algorithmFileType == 2){
+    //     MergeSort mergeSort = MergeSort();
+    // }
+    // else if(algorithmFileType == 3){
+    //     QuickSort quickSort = QuickSort();
+    // }
+    // else if(algorithmFileType == 4){
+    //     CountSort countSort = CountSort();
+    // }
     
 
     time(&end);

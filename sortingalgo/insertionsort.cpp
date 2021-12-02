@@ -26,6 +26,7 @@ void InsertionSort::writeFile(std::vector<int> &numbers){
     std::ofstream outFile("sortednumbers.txt");
     for(int i = 0; i< numbers.size(); i++){
         outFile << numbers[i]<<" ";
+        
     }
 }
 

@@ -8,4 +8,4 @@ class QuickSort {
         //class call
         
         //
-}
+};

@@ -1,36 +1,45 @@
 #include <iostream>
+#include <vector>
 #include <iomanip>
+#include <string>
+#include <sstream>
+#include <fstream>
+#include "insertionSort.h"
 
-void insertionSort(int array[], int size){
-    for(int i = 0; i<size; i++){
-        int current = array[i];
-        int j = i-1;
 
-        while(current<array[j] && j>=0){
-            array[j+1] = array[j];
-            --j;
+
+InsertionSort::InsertionSort(std::string fileType, int size, std::vector<int> &numbers){
+//reading the file into an array and finding the size
+    std::ifstream file(fileType);
+    if(file){
+        int value;
+        while(file>>value){
+            numbers.push_back(value);
         }
-        array[j+1] = current;
     }
 
 }
 
-int main(){
+void InsertionSort::writeFile(std::vector<int> &numbers){
+    //should change to be able to pick outputfile name
+    //idea: be able to write out to file in a 2d vector
+    std::ofstream outFile("sortednumbers.txt");
+    for(int i = 0; i< numbers.size(); i++){
+        outFile << numbers[i]<<" ";
+        
+    }
+}
 
-    int array [5] = { 16, 2, 77, 40, 12071}; 
 
-    time_t start, end;
-
-    time(&start);
-
-    insertionSort(array, 5);
-
-    time(&end);
-
-    double time_taken = double(end - start);
-
-    std::cout << "Time taken by program is : " << std::fixed
-         << time_taken << std::setprecision(5);
-    std::cout << " sec " << std::endl;
-
+void InsertionSort::doTheSort(std::vector<int> &numbers, int size){
+    int i, j, temp;
+    for(i = 1; i<size; i++){
+        j = i;
+        temp = numbers[i];
+        while(j>0 && temp<numbers[j-1]){
+            numbers[j]=numbers[j-1];
+            j--;
+        }
+        numbers[j]=temp;
+    }
 }

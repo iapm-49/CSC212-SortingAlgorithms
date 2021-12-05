@@ -173,146 +173,145 @@ int main() {
             }  
         }
     }
-<<<<<<< Updated upstream
+
+    // //if user selects MERGE SORT
+    // else if(algorithmFileType == 2){
+    //     MergeSort mergeSort = MergeSort();
+    // }
     
-    //if user selects MERGE SORT
-    else if(algorithmFileType == 2){
-        MergeSort mergeSort = MergeSort();
-    }
-    
-    //if user selects QUICK SORT
-    else if(algorithmFileType == 3){
+    // //if user selects QUICK SORT
+    // else if(algorithmFileType == 3){
         
-        //if user selects SMALL FILE SIZE (100)
-        if(textFileType == 1){
+    //     //if user selects SMALL FILE SIZE (100)
+    //     if(textFileType == 1){
             
-            //if user selects SORTED
-            if(fileProperty == 1){
-                QuickSort quickSort = QuickSort("smallSorted.txt", 100, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects SORTED
+    //         if(fileProperty == 1){
+    //             QuickSort quickSort = QuickSort("smallSorted.txt", 100, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects REVERSED
-            else if(fileProperty == 2){
-                QuickSort quickSort = QuickSort("smallReversed.txt", 100, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects REVERSED
+    //         else if(fileProperty == 2){
+    //             QuickSort quickSort = QuickSort("smallReversed.txt", 100, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects RANDOM
-            else if(fileProperty == 3){
-                QuickSort quickSort = QuickSort("smallRandom.txt", 100, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects RANDOM
+    //         else if(fileProperty == 3){
+    //             QuickSort quickSort = QuickSort("smallRandom.txt", 100, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects PARTIALLY SORTED
-            else{
-                QuickSort quickSort = QuickSort("smallPSorted.txt", 100, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }  
-        }
+    //         //if user selects PARTIALLY SORTED
+    //         else{
+    //             QuickSort quickSort = QuickSort("smallPSorted.txt", 100, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }  
+    //     }
         
-        //if user selects MEDIUM FILE SIZE (500)
-        else if(textFileType == 2){
+    //     //if user selects MEDIUM FILE SIZE (500)
+    //     else if(textFileType == 2){
             
-            //if user selects SORTED
-            if(fileProperty == 1){
-                QuickSort quickSort = QuickSort("mediumSorted.txt", 500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects SORTED
+    //         if(fileProperty == 1){
+    //             QuickSort quickSort = QuickSort("mediumSorted.txt", 500, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects REVERSED
-            else if(fileProperty == 2){
-                QuickSort quickSort = QuickSort("mediumReversed.txt", 500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects REVERSED
+    //         else if(fileProperty == 2){
+    //             QuickSort quickSort = QuickSort("mediumReversed.txt", 500, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects RANDOM
-            else if(fileProperty == 3){
-                QuickSort quickSort = QuickSort("mediumRandom.txt", 500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects RANDOM
+    //         else if(fileProperty == 3){
+    //             QuickSort quickSort = QuickSort("mediumRandom.txt", 500, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects PARTIALLY SORTED
-            else{
-                QuickSort quickSort = QuickSort("mediumPSorted.txt", 500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }  
-        }
+    //         //if user selects PARTIALLY SORTED
+    //         else{
+    //             QuickSort quickSort = QuickSort("mediumPSorted.txt", 500, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }  
+    //     }
         
-        //if user selects LARGE FILE SIZE (1500)
-        else if(textFileType == 3){
+    //     //if user selects LARGE FILE SIZE (1500)
+    //     else if(textFileType == 3){
             
-            //if user selects SORTED
-            if(fileProperty == 1){
-                QuickSort quickSort = QuickSort("largeSorted.txt", 1500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects SORTED
+    //         if(fileProperty == 1){
+    //             QuickSort quickSort = QuickSort("largeSorted.txt", 1500, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects REVERSED
-            else if(fileProperty == 2){
-                QuickSort quickSort = QuickSort("largeReversed.txt", 1500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects REVERSED
+    //         else if(fileProperty == 2){
+    //             QuickSort quickSort = QuickSort("largeReversed.txt", 1500, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects RANDOM
-            else if(fileProperty == 3){
-                QuickSort quickSort = QuickSort("largeRandom.txt", 1500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects RANDOM
+    //         else if(fileProperty == 3){
+    //             QuickSort quickSort = QuickSort("largeRandom.txt", 1500, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects PARTIALLY SORTED
-            else{
-                QuickSort quickSort = QuickSort("largePSorted.txt", 1500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }  
-        }
+    //         //if user selects PARTIALLY SORTED
+    //         else{
+    //             QuickSort quickSort = QuickSort("largePSorted.txt", 1500, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }  
+    //     }
         
-        //if user selects EXTRA LARGE FILE SIZE (8000)
-        else if(textFileType == 4){
+    //     //if user selects EXTRA LARGE FILE SIZE (8000)
+    //     else if(textFileType == 4){
             
-            //if user selects SORTED
-            if(fileProperty == 1){
-                QuickSort quickSort = QuickSort("xlSorted.txt", 8000, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects SORTED
+    //         if(fileProperty == 1){
+    //             QuickSort quickSort = QuickSort("xlSorted.txt", 8000, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects REVERSED
-            else if(fileProperty == 2){
-                QuickSort quickSort = QuickSort("xlReversed.txt", 8000, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects REVERSED
+    //         else if(fileProperty == 2){
+    //             QuickSort quickSort = QuickSort("xlReversed.txt", 8000, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //if user selects RANDOM
-            else if(fileProperty == 3){
-                QuickSort quickSort = QuickSort("xlRandom.txt", 8000, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }
+    //         //if user selects RANDOM
+    //         else if(fileProperty == 3){
+    //             QuickSort quickSort = QuickSort("xlRandom.txt", 8000, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }
             
-            //change these else statements to if filePoperty == 4 so we cannot have extra numbers (create error message for
-            //numbers other than 1-4)
-            //if user selects PARTIALLY SORTED
-            else{
-                QuickSort quickSort = QuickSort("xlPSorted.txt", 8000, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
-                quickSort.writeFile(numbers);
-            }  
-        }
-    }
+    //         //change these else statements to if filePoperty == 4 so we cannot have extra numbers (create error message for
+    //         //numbers other than 1-4)
+    //         //if user selects PARTIALLY SORTED
+    //         else{
+    //             QuickSort quickSort = QuickSort("xlPSorted.txt", 8000, numbers);
+    //             quickSort.doTheSort(numbers, numbers.size());
+    //             quickSort.writeFile(numbers);
+    //         }  
+    //     }
+    // }
     
     //if user selects COUNT SORT
     else if(algorithmFileType == 4){
@@ -445,104 +444,6 @@ int main() {
             }  
         }
     }
-=======
-    // else if(algorithmFileType == 2){
-    //     MergeSort mergeSort = MergeSort();
-    // }
-    // else if(algorithmFileType == 3){
-    //     QuickSort quickSort = QuickSort();
-    // }
-    // else if(algorithmFileType == 4){
-    //     if(textFileType == 1){
-    //         if(fileProperty == 1){
-    //             CountSort countSort = CountSort("smallSorted.txt", 100, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else if(fileProperty == 2){
-    //             CountSort countSort = CountSort("smallReversed.txt", 100, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else if(fileProperty == 3){
-    //             CountSort countSort = CountSort("smallRandom.txt", 100, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else{
-    //             CountSort countSort = CountSort("smallPSorted.txt", 100, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }  
-    //     }
-    //     else if(textFileType == 2){
-    //         if(fileProperty == 1){
-    //             CountSort countSort = CountSort("mediumSorted.txt", 500, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else if(fileProperty == 2){
-    //             CountSort countSort = CountSort("mediumReversed.txt", 500, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else if(fileProperty == 3){
-    //             CountSort countSort = CountSort("mediumRandom.txt", 500, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else{
-    //             CountSort countSort = CountSort("mediumPSorted.txt", 500, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }  
-    //     }
-    //     else if(textFileType == 3){
-    //         if(fileProperty == 1){
-    //             CountSort countSort = CountSort("largeSorted.txt", 1500, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else if(fileProperty == 2){
-    //             CountSort countSort = CountSort("largeReversed.txt", 1500, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else if(fileProperty == 3){
-    //             CountSort countSort = CountSort("largeRandom.txt", 1500, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else{
-    //             CountSort countSort = CountSort("largePSorted.txt", 1500, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }  
-    //     }
-    //     else if(textFileType == 4){
-    //         if(fileProperty == 1){
-    //             CountSort countSort = CountSort("xlSorted.txt", 8000, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else if(fileProperty == 2){
-    //             CountSort countSort = CountSort("xlReversed.txt", 8000, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else if(fileProperty == 3){
-    //             CountSort countSort = CountSort("xlRandom.txt", 8000, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }
-    //         else{
-    //             CountSort countSort = CountSort("xlPSorted.txt", 8000, numbers);
-    //             countSort.doTheSort(numbers, numbers.size());
-    //             countSort.writeFile(numbers);
-    //         }  
-    //     }
-    // }
->>>>>>> Stashed changes
     
     //stop time count
     time(&end);

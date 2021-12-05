@@ -32,7 +32,9 @@ void CountSort::writeFile(std::vector<int> &numbers){
 
 
 void CountSort::doTheSort(std::vector<int> &numbers, int size){
+    //another vector to 
     std::vector<int> B(numbers.size(), 0);
+        //this vector stores the occurences of each unique element
         std::vector<int> count(numbers.size()+1, 0);
         for(int i=0; i<numbers.size(); i++)
             count[numbers[i]]++;

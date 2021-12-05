@@ -185,7 +185,134 @@ int main() {
 
     //if user selects MERGE SORT
     else if(algorithmFileType == 2){
-        MergeSort mergeSort = MergeSort();
+        
+        //if user selects SMALL FILE SIZE (100)
+        if(textFileType == 1){
+            
+            //if user selects SORTED
+            if(fileProperty == 1){
+                MergeSort mergeSort = MergeSort("smallSorted.txt", 100, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects REVERSED
+            else if(fileProperty == 2){
+                MergeSort mergeSort = MergeSort("smallReversed.txt", 100, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects RANDOM
+            else if(fileProperty == 3){
+                MergeSort mergeSort = MergeSort("smallRandom.txt", 100, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects PARTIALLY SORTED
+            else{
+                MergeSort mergeSort = MergeSort("smallPSorted.txt", 100, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }  
+        }
+        
+        //if user selects MEDIUM FILE SIZE (500)
+        else if(textFileType == 2){
+            
+            //if user selects SORTED
+            if(fileProperty == 1){
+                MergeSort mergeSort = MergeSort("mediumSorted.txt", 500, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects REVERSED
+            else if(fileProperty == 2){
+                MergeSort mergeSort = MergeSort("mediumReversed.txt", 500, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects RANDOM
+            else if(fileProperty == 3){
+                MergeSort mergeSort = MergeSort("mediumRandom.txt", 500, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects PARTIALLY SORTED
+            else{
+                MergeSort mergeSort = MergeSort("mediumPSorted.txt", 500, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }  
+        }
+        
+        //if user selects LARGE FILE SIZE (1500)
+        else if(textFileType == 3){
+            
+            //if user selects SORTED
+            if(fileProperty == 1){
+                MergeSort mergeSort = MergeSort("largeSorted.txt", 1500, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects REVERSED
+            else if(fileProperty == 2){
+                MergeSort mergeSort = MergeSort("largeReversed.txt", 1500, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects RANDOM
+            else if(fileProperty == 3){
+                MergeSort mergeSort = MergeSort("largeRandom.txt", 1500, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects PARTIALLY SORTED
+            else{
+                MergeSort mergeSort = MergeSort("largePSorted.txt", 1500, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }  
+        }
+        
+        //if user selects EXTRA LARGE FILE SIZE (8000)
+        else if(textFileType == 4){
+            
+            //if user selects SORTED
+            if(fileProperty == 1){
+                MergeSort mergeSort = MergeSort("xlSorted.txt", 8000, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects REVERSED
+            else if(fileProperty == 2){
+                MergeSort mergeSort = MergeSort("xlReversed.txt", 8000, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects RANDOM
+            else if(fileProperty == 3){
+                MergeSort mergeSort = MergeSort("xlRandom.txt", 8000, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }
+            
+            //if user selects PARTIALLY SORTED
+            else{
+                MergeSort mergeSort = MergeSort("xlPSorted.txt", 8000, numbers);
+                mergeSort.doTheSort(numbers, numbers.size());
+                mergeSort.writeFile(numbers);
+            }  
+        }
     }
     
     //if user selects QUICK SORT

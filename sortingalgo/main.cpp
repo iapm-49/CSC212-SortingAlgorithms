@@ -6,6 +6,7 @@
 #include "mergeSort.h"
 #include "quickSort.h"
 #include "countSort.h"
+#include <stdexcept>
 
 int main() {
     //initiating variables
@@ -22,21 +23,29 @@ int main() {
     //vector of numbers we are sorting
     std::vector<int> numbers;
     
-    //user selections, output and input
+
+    // void checkValidNumber(int input){
+    //     if(input>5 || input<1){
+    //         throw std::out_of_range("You must enter a valid number. Please try again");
+    //     }
+    // }
+
     
+    //user selections, output and input
     std::cout<< "Welcome to our Algorithm Project, please pick your Sorting Algorithm:" << "\n";
     std::cout<< "1 = Insertion Sort" << "           " << "2 = Merge Sort" << "\n" << "3 = Quick Sort" << "               " << "4 = Count Sort" << "\n" << "Your Selection: ";
     std::cin>> algorithmFileType;
-    
+        
     std::cout<< "\n" << "Now pick what size file you want:" << "\n";
     std::cout<< "1 = Small File Size(100)" << "               " << "2 = Medium File Size(500)" << "\n" << "3 = large File Size(1500)" << "              " << "4 = Extra Large File Size(8000)(not for the faint of heart)" << "\n" << "Your Selection: ";
     std::cin>> textFileType;
-    
+        
     std::cout<< "\n" "Now select the file's property:" << "\n";
     std::cout<< "1 = Sorted" << "           " << "2 = Reversed" << "\n" << "3 = Random" << "           " << "4 = Partially Sorted" << "\n" << "Your Selection: ";
     std::cin>> fileProperty;
     
-    //not sure exactly what this is
+    
+    //declaring start and end 
     time_t start, end;
     
     //start time count
@@ -173,7 +182,7 @@ int main() {
             }  
         }
     }
-    
+
     //if user selects MERGE SORT
     else if(algorithmFileType == 2){
         MergeSort mergeSort = MergeSort();

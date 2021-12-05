@@ -32,14 +32,20 @@ void CountSort::writeFile(std::vector<int> &numbers){
 
 
 void CountSort::doTheSort(std::vector<int> &numbers, int size){
-    int i, j, temp;
-    for(i = 1; i<size; i++){
-        j = i;
-        temp = numbers[i];
-        while(j>0 && temp<numbers[j-1]){
-            numbers[j]=numbers[j-1];
-            j--;
+    //another vector to 
+    std::vector<int> B(numbers.size(), 0);
+        //this vector stores the occurences of each unique element
+        std::vector<int> count(numbers.size()+1, 0);
+        for(int i=0; i<numbers.size(); i++)
+            count[numbers[i]]++;
+        for(int i=1; i<=numbers.size(); i++)
+            count[i] += count[i-1];
+        for(int i=0; i<numbers.size(); i++)
+        {
+            B[count[numbers[i]] - 1] = numbers[i];
+            count[numbers[i]]--;
         }
-        numbers[j]=temp;
-    }
+        for(int i=0; i<numbers.size(); i++)
+            numbers[i] = B[i];
 }
+

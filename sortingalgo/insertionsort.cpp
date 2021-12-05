@@ -7,9 +7,8 @@
 #include "insertionSort.h"
 
 
-
 InsertionSort::InsertionSort(std::string fileType, int size, std::vector<int> &numbers){
-//reading the file into an array and finding the size
+//reading the file into a vector and finding the size
     std::ifstream file(fileType);
     if(file){
         int value;
@@ -19,6 +18,7 @@ InsertionSort::InsertionSort(std::string fileType, int size, std::vector<int> &n
     }
 
 }
+
 
 void InsertionSort::writeFile(std::vector<int> &numbers){
     //should change to be able to pick outputfile name
@@ -32,10 +32,13 @@ void InsertionSort::writeFile(std::vector<int> &numbers){
 
 
 void InsertionSort::doTheSort(std::vector<int> &numbers, int size){
+    //i holds a value in the vector, j holds the value next to i, temp serves as the key
     int i, j, temp;
+    //iterate from numbers[1] to numbers[size] over the vector
     for(i = 1; i<size; i++){
         j = i;
         temp = numbers[i];
+        //move elements that are greater than temp to one position greater than their current position
         while(j>0 && temp<numbers[j-1]){
             numbers[j]=numbers[j-1];
             j--;

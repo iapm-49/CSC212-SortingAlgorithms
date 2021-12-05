@@ -20,7 +20,7 @@ QuickSort::QuickSort(std::string fileType, int size, std::vector<int> &numbers){
 }
 
 //swaps values
-void swapping(int &numA, int &numB){
+void QuickSort::swapping(int &numA, int &numB){
     int temp = numA;
     numA = numB;
     numB = temp;
@@ -36,7 +36,7 @@ void QuickSort::partition(std::vector<int> &numbers, int lo, int hi){
     int i = (low - 1);
   
     //traverse through the list of numbers
-    for (int j = lo; j <= (high - 1); j++){
+    for (int j = lo; j <= (hi - 1); j++){
       
         //if the number is greater than the value of the pivot, increment i and swap
         if (numbers[j] < pivot){
@@ -48,7 +48,7 @@ void QuickSort::partition(std::vector<int> &numbers, int lo, int hi){
         }
     }
     //call swap function for i + 1 and the pivot
-    swapping(numbers[i + 1], numbers[high]);
+    swapping(numbers[i + 1], numbers[hi]);
     
     //returns index of partition (where the list changes from less than the pivot
     //to greater than the pivot)
@@ -64,7 +64,7 @@ void QuickSort::doTheSort(std::vector<int> &numbers, int lo, int hi){
         
         //recursively call this function to separately sort both sides of the partition
         doTheSort(numbers, lo, partitionIndex - 1);
-        doTheSort(numbers, partitionIndex + 1, high);
+        doTheSort(numbers, partitionIndex + 1, hi);
     }
   
 }

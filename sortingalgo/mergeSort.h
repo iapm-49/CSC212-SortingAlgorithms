@@ -1,11 +1,14 @@
 #include <iostream>
+#include <string>
+#include <vector>
 
-class MergeSort {
+class mergeSort {
     public:
         //class constructor
-        MergeSort();
+        mergeSort();
         
-        //class call
+        mergeSort(std::string fileType, int size, std::vector<int> &numbers);
+        void doSort(std::vector<int> &numbers, int size);
+        void writeFile(std::vector<int> &numbers);
         
-        //
 };

@@ -318,12 +318,14 @@ int main() {
     //if user selects QUICK SORT
     else if(algorithmFileType == 3){
         
-        //initialize lo and hi
+        //initialize lo
         int lo = 0;
-        int hi = (numbers.size() - 1);
         
         //if user selects SMALL FILE SIZE (100)
         if(textFileType == 1){
+            
+            //initialize hi for small
+            int hi = (100 - 1);
             
             //if user selects SORTED
             if(fileProperty == 1){
@@ -357,6 +359,9 @@ int main() {
         //if user selects MEDIUM FILE SIZE (500)
         else if(textFileType == 2){
             
+            //initialize hi for medium
+            int hi = (500 - 1);
+            
             //if user selects SORTED
             if(fileProperty == 1){
                 QuickSort quickSort = QuickSort("mediumSorted.txt", 500, numbers);
@@ -389,6 +394,9 @@ int main() {
         //if user selects LARGE FILE SIZE (1500)
         else if(textFileType == 3){
             
+            //initialize hi for large
+            int hi = (1500 - 1);
+            
             //if user selects SORTED
             if(fileProperty == 1){
                 QuickSort quickSort = QuickSort("largeSorted.txt", 1500, numbers);
@@ -420,6 +428,9 @@ int main() {
         
         //if user selects EXTRA LARGE FILE SIZE (8000)
         else if(textFileType == 4){
+            
+            //initialize hi for extra large
+            int hi = (8000 - 1);
             
             //if user selects SORTED
             if(fileProperty == 1){

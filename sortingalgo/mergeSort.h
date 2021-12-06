@@ -2,13 +2,13 @@
 #include <string>
 #include <vector>
 
-class mergeSort {
+class MergeSort {
     public:
         //class constructor
-        mergeSort();
+        MergeSort();
         
-        mergeSort(std::string fileType, int size, std::vector<int> &numbers);
-        void doSort(std::vector<int> &numbers, int size);
+        MergeSort(std::string fileType, int size, std::vector<int> &numbers);
+        void doTheSort(std::vector<int> &numbers, int size);
         void writeFile(std::vector<int> &numbers);
         
 };

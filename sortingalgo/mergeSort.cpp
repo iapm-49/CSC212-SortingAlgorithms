@@ -20,12 +20,29 @@ MergeSort::MergeSort(std::string fileType, int size, std::vector<int> &numbers){
 }
 
 void MergeSort::writeFile(std::vector<int> &numbers){
-    //should change to be able to pick outputfile name
-    
-    //idea: be able to write out to file in a 2d vector
+    //made a 2d vector so that write file is easier to read 
+    std::vector<std::vector<int> > final;
+    //row size dependent on size of file 
+    int rowSize = numbers.size()/10;
+    //col size is always 10
+    int colSize = 10;
+    //nested for loop transforms 1d "numbers" vector into 2d "final" vector
+    for(int i = 0; i < rowSize; i++){
+        std::vector<int> row;
+        for (int j = 0; j < colSize; j++){
+            row.push_back(numbers[(i*10)+j]);
+        }
+        final.push_back(row);
+    }
+
+    //create and write to file
     std::ofstream outFile("sortednumbers.txt");
-    for(int i = 0; i < numbers.size(); i++){
-        outFile << numbers[i]<<" ";
+    //nested for loop to write final results 
+    for(int i = 0; i < final.size(); i++){
+        for(int j = 0; j < final[0].size(); j++){
+            outFile << final[i][j]<<" ";
+        }
+        outFile << "\n";
     }
 }
 

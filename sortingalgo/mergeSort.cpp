@@ -19,55 +19,89 @@ MergeSort::MergeSort(std::string fileType, int size, std::vector<int> &numbers){
     }
 }
 
+
 void MergeSort::writeFile(std::vector<int> &numbers){
-    //should change to be able to pick outputfile name
-    
-    //idea: be able to write out to file in a 2d vector
-    std::ofstream outFile("sortednumbers.txt");
-    for(int i = 0; i < numbers.size(); i++){
-        outFile << numbers[i]<<" ";
+    // Made a 2d vector so writing to file is easier to read
+    std::vector<std::vector<int>> final;
+	
+    // Row size dependent on size of file
+    int rowSize = numbers.size()/10;
+	
+    // Column size is always 10
+    int colSize = 10;
+	
+    // Nested for loop transforms 1d "numbers" vector into 2d "final" vector
+    for(int i = 0; i < rowSize; i++){
+	    std::vector<int> row;
+	    for(int j = 0; j < colSize; j++){
+		    row.push_back(numbers[(i * 10) + j]);
+	     }
+	    final.push_back(row);
     }
+	
+    //Create and write of file
+    std::ofstream outFile("sortednumbers.txt");
+    // Nested for loop to write final results
+    for(int i = 0; i < final.size(); i++){
+	    for(int j = 0; j < final[0].size(); j++){
+        	outFile << final[i][j] << " ";
+    	    }
+	    utFile << "\n";
+	}
 }
 
-void mergeVector(std::vector<int> &numbers, int high, int middle, int low, int size){
-    int a = low;
-    int b = middle + 1;
-    std::vector<int> tempVec;
-    
-	while (a <= middle and b <= size - 1) {
 
-		if (numbers[a] <= numbers[b]) {
-			tempVec.push_back(numbers[a]);
+void mergeVector(std::vector<int> &numbers, int low, int middle, int high, int size){
+    int newLow = middle - low + 1;
+    int newHigh = high - middle;
+	
+    std::vector<int> lowVec;
+    std::vector<int> highVec
+	    
+    for(int i = 0; i < newLow; i++){
+	    lowVec.push_back(numbers[low + i]);
+    }
+	
+    for(int j = 0; j < newHigh; j++){
+	    highVec.push_back(numbers[middle + 1 + j]);
+    }
+    
+    int a = 0;
+    int b = 0;
+    int c = low;
+	    
+	while (a <= newLow and b <= newHigh){
+		if (lowVec[a] <= newVec[b]) {
+			numbers[c] = lowVec[a];
 			a++;
 		}
 		else {
-			tempVec.push_back(numbers[b]);
+			numbers[c] = highVec[b];
 			b++;
 		}
+	  c++;
 	}
 
-	while (a <= middle) {
-		tempVec.push_back(numbers[a]);
+	while (a <= newLow){
+		numbers[c] = lowVec[a];
 		a++;
+		c++;
 	}
-
-	while (b <= size - 1) {
-		tempVec.push_back(numbers[b]);
+	while(b < newHigh){
+		numbers[c] = highVec[b];
 		b++;
+		c++;
 	}
-	for (int i = a; i <= size - 1; ++i){
-		numbers[a] = tempVec[a - middle];
-    }
 }
+		
 
 // Recursive function that goes into itself finding a new low to compare itself into
-void mergeSolve(std::vector<int> &numbers, int high, int low, int size){
+void mergeSolve(std::vector<int> &numbers, int low, int high, int size){
     if(low < high){
-        int middle = (low + high) / 2;
+        int middle = low + (high - low) / 2;
         mergeSolve(numbers, low, middle, size);
         mergeSolve(numbers, middle + 1, high, size);
-        
-        mergeVector(numbers, high, middle, low, size);
+        mergeVector(numbers, low, middle, high, size);
     }
     return;
 }
@@ -75,6 +109,6 @@ void mergeSolve(std::vector<int> &numbers, int high, int low, int size){
 void MergeSort::doTheSort(std::vector<int> &numbers, int size){
     int high = size - 1;
     int low = 0;
-    mergeSolve(numbers, high, low, size);
+    mergeSolve(numbers, low, high, size);
 }
     

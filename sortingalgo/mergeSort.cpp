@@ -46,7 +46,7 @@ void MergeSort::writeFile(std::vector<int> &numbers){
 	    for(int j = 0; j < final[0].size(); j++){
         	outFile << final[i][j] << " ";
     	    }
-	    utFile << "\n";
+	    outFile << "\n";
 	}
 }
 
@@ -71,7 +71,7 @@ void MergeSort::mergeVector(std::vector<int> &numbers, int low, int middle, int 
     int c = low;
 	    
 	while (a <= newLow and b <= newHigh){
-		if (lowVec[a] <= newVec[b]) {
+		if (lowVec[a] <= highVec[b]) {
 			numbers[c] = lowVec[a];
 			a++;
 		}

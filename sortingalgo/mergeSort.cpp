@@ -37,17 +37,16 @@ void MergeSort::writeFile(std::vector<int> &numbers){
 		    row.push_back(numbers[(i * 10) + j]);
 	     }
 	    final.push_back(row);
-    }
-	
-    //Create and write of file
+
+    //create and write to file
     std::ofstream outFile("sortednumbers.txt");
-    // Nested for loop to write final results
+    //nested for loop to write final results 
     for(int i = 0; i < final.size(); i++){
-	    for(int j = 0; j < final[0].size(); j++){
-        	outFile << final[i][j] << " ";
-    	    }
-	    outFile << "\n";
-	}
+        for(int j = 0; j < final[0].size(); j++){
+            outFile << final[i][j]<<" ";
+        }
+        outFile << "\n";
+    }
 }
 
 

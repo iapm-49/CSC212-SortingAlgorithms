@@ -318,34 +318,40 @@ int main() {
     //if user selects QUICK SORT
     else if(algorithmFileType == 3){
         
+        //initialize lo
+        int lo = 0;
+        
         //if user selects SMALL FILE SIZE (100)
         if(textFileType == 1){
+            
+            //initialize hi for small
+            int hi = (100 - 1);
             
             //if user selects SORTED
             if(fileProperty == 1){
                 QuickSort quickSort = QuickSort("smallSorted.txt", 100, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects REVERSED
             else if(fileProperty == 2){
                 QuickSort quickSort = QuickSort("smallReversed.txt", 100, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects RANDOM
             else if(fileProperty == 3){
                 QuickSort quickSort = QuickSort("smallRandom.txt", 100, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects PARTIALLY SORTED
             else{
                 QuickSort quickSort = QuickSort("smallPSorted.txt", 100, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }  
         }
@@ -353,31 +359,34 @@ int main() {
         //if user selects MEDIUM FILE SIZE (500)
         else if(textFileType == 2){
             
+            //initialize hi for medium
+            int hi = (500 - 1);
+            
             //if user selects SORTED
             if(fileProperty == 1){
                 QuickSort quickSort = QuickSort("mediumSorted.txt", 500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects REVERSED
             else if(fileProperty == 2){
                 QuickSort quickSort = QuickSort("mediumReversed.txt", 500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects RANDOM
             else if(fileProperty == 3){
                 QuickSort quickSort = QuickSort("mediumRandom.txt", 500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects PARTIALLY SORTED
             else{
                 QuickSort quickSort = QuickSort("mediumPSorted.txt", 500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }  
         }
@@ -385,31 +394,34 @@ int main() {
         //if user selects LARGE FILE SIZE (1500)
         else if(textFileType == 3){
             
+            //initialize hi for large
+            int hi = (1500 - 1);
+            
             //if user selects SORTED
             if(fileProperty == 1){
                 QuickSort quickSort = QuickSort("largeSorted.txt", 1500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects REVERSED
             else if(fileProperty == 2){
                 QuickSort quickSort = QuickSort("largeReversed.txt", 1500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects RANDOM
             else if(fileProperty == 3){
                 QuickSort quickSort = QuickSort("largeRandom.txt", 1500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects PARTIALLY SORTED
             else{
                 QuickSort quickSort = QuickSort("largePSorted.txt", 1500, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }  
         }
@@ -417,24 +429,27 @@ int main() {
         //if user selects EXTRA LARGE FILE SIZE (8000)
         else if(textFileType == 4){
             
+            //initialize hi for extra large
+            int hi = (8000 - 1);
+            
             //if user selects SORTED
             if(fileProperty == 1){
                 QuickSort quickSort = QuickSort("xlSorted.txt", 8000, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects REVERSED
             else if(fileProperty == 2){
                 QuickSort quickSort = QuickSort("xlReversed.txt", 8000, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
             //if user selects RANDOM
             else if(fileProperty == 3){
                 QuickSort quickSort = QuickSort("xlRandom.txt", 8000, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }
             
@@ -443,7 +458,7 @@ int main() {
             //if user selects PARTIALLY SORTED
             else{
                 QuickSort quickSort = QuickSort("xlPSorted.txt", 8000, numbers);
-                quickSort.doTheSort(numbers, numbers.size());
+                quickSort.doTheSort(numbers, lo, hi);
                 quickSort.writeFile(numbers);
             }  
         }

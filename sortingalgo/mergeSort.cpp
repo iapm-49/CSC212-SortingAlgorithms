@@ -51,12 +51,12 @@ void MergeSort::writeFile(std::vector<int> &numbers){
 }
 
 
-void mergeVector(std::vector<int> &numbers, int low, int middle, int high, int size){
+void MergeSort::mergeVector(std::vector<int> &numbers, int low, int middle, int high, int size){
     int newLow = middle - low + 1;
     int newHigh = high - middle;
 	
     std::vector<int> lowVec;
-    std::vector<int> highVec
+    std::vector<int> highVec;
 	    
     for(int i = 0; i < newLow; i++){
 	    lowVec.push_back(numbers[low + i]);
@@ -96,7 +96,7 @@ void mergeVector(std::vector<int> &numbers, int low, int middle, int high, int s
 		
 
 // Recursive function that goes into itself finding a new low to compare itself into
-void mergeSolve(std::vector<int> &numbers, int low, int high, int size){
+void MergeSort::mergeSolve(std::vector<int> &numbers, int low, int high, int size){
     if(low < high){
         int middle = low + (high - low) / 2;
         mergeSolve(numbers, low, middle, size);

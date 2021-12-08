@@ -69,6 +69,7 @@ void QuickSort::doTheSort(std::vector<int> &numbers, int lo, int hi){
   
 }
 
+//writes to the sorted numbers text file
 void QuickSort::writeFile(std::vector<int> &numbers){
     //made a 2d vector so that write file is easier to read 
     std::vector<std::vector<int> > final;

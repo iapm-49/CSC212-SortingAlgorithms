@@ -9,7 +9,7 @@
 
 
 CountSort::CountSort(std::string fileType, int size, std::vector<int> &numbers){
-//reading the file into an array and finding the size
+    //reading the file into an array and finding the size
     std::ifstream file(fileType);
     if(file){
         int value;

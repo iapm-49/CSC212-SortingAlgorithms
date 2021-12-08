@@ -2,12 +2,13 @@
 #include <string>
 #include <iomanip>
 #include <vector>
-#include <ctime>
 #include "insertionSort.h"
 #include "mergeSort.h"
 #include "quickSort.h"
 #include "countSort.h"
 #include <stdexcept> 
+#include "time.h"
+
 
 int main() {
     //initiating variables
@@ -74,10 +75,10 @@ int main() {
         }
 
         //declaring start and end 
-        time_t start, end;
+        clock_t start,end;
 
         //start time count
-        time(&start);
+        start = clock();
 
         //if user selects INSERTION SORT
         if(algorithmFileType == 1){
@@ -496,10 +497,10 @@ int main() {
         }
 
         //stop time count
-        time(&end);
+        end=clock();
 
         //finds time taken
-        double time_taken = double(end - start);
+        double time_taken = double(end - start)/ double(CLOCKS_PER_SEC);
 
         //print out time taken
         std::cout << "Time taken by program is : " << std::fixed << time_taken << std::setprecision(5);

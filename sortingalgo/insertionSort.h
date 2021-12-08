@@ -10,7 +10,4 @@ class InsertionSort {
         void writeFile(std::vector<int> &numbers);
         void doTheSort(std::vector<int> &numbers, int size);
         
-        //class call
-        
-        //
 };

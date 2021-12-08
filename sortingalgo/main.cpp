@@ -24,27 +24,45 @@ int main() {
     //vector of numbers we are sorting
     std::vector<int> numbers;
     
-
-    // void checkValidNumber(int input){
-    //     if(input>5 || input<1){
-    //         throw std::out_of_range("You must enter a valid number. Please try again");
-    //     }
-    // }
-
-    
     //user selections, output and input
     std::cout<< "Welcome to our Algorithm Project, please pick your Sorting Algorithm:" << "\n";
     std::cout<< "1 = Insertion Sort" << "           " << "2 = Merge Sort" << "\n" << "3 = Quick Sort" << "               " << "4 = Count Sort" << "\n" << "Your Selection: ";
-    std::cin>> algorithmFileType;
+    
+    //exception handling for first input
+    while (std::cin>> algorithmFileType){
+        if (algorithmFileType == 1 || algorithmFileType == 2 || algorithmFileType == 3){
+            break;
+        }
+        else {
+            std::cout<< "Input is out of range. Try again!" << "\n";
+        }
+    }
 
     std::cout<< "\n" << "Now pick what size file you want:" << "\n";
     std::cout<< "1 = Small File Size(1000)" << "               " << "2 = Medium File Size(10000)" << "\n" << "3 = Large File Size(100000)" << "\n" << "Your Selection: ";
-    std::cin>> textFileType;
+    
+    //exception handling for second input
+    while (std::cin>> textFileType){
+        if (textFileType == 1 || textFileType == 2 || textFileType == 3){
+            break;
+        }
+        else {
+            std::cout<< "Input is out of range. Try again!" << "\n";
+        }
+    }
         
     std::cout<< "\n" "Now select the file's property:" << "\n";
     std::cout<< "1 = Sorted" << "           " << "2 = Reversed" << "\n" << "3 = Random" << "           " << "4 = Partially Sorted" << "\n" << "Your Selection: ";
-    std::cin>> fileProperty;
     
+    //exception handling for third input
+    while (std::cin>> fileProperty){
+        if (fileProperty == 1 || fileProperty == 2 || fileProperty == 3){
+            break;
+        }
+        else {
+            std::cout<< "Input is out of range. Try again!" << "\n";
+        }
+    }
     
     //declaring start and end 
     time_t start, end;

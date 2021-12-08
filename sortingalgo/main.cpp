@@ -38,7 +38,7 @@ int main() {
     std::cin>> algorithmFileType;
 
     std::cout<< "\n" << "Now pick what size file you want:" << "\n";
-    std::cout<< "1 = Small File Size(1000)" << "               " << "2 = Medium File Size(10000)" << "\n" << "3 = large File Size(100000)" << "              " << "4 = Extra Large File Size(1000000)(not for the faint of heart)" << "\n" << "Your Selection: ";
+    std::cout<< "1 = Small File Size(1000)" << "               " << "2 = Medium File Size(10000)" << "\n" << "3 = Large File Size(100000)" << "\n" << "Your Selection: ";
     std::cin>> textFileType;
         
     std::cout<< "\n" "Now select the file's property:" << "\n";
@@ -151,37 +151,6 @@ int main() {
             }  
         }
         
-        //if user selects EXTRA LARGE FILE SIZE (1000000)
-        else if(textFileType == 4){
-            
-            //if user selects SORTED
-            if(fileProperty == 1){
-                InsertionSort insertionSort = InsertionSort("xlSorted.txt", 1000000, numbers);
-                insertionSort.doTheSort(numbers, numbers.size());
-                insertionSort.writeFile(numbers);
-            }
-            
-            //if user selects REVERSED
-            else if(fileProperty == 2){
-                InsertionSort insertionSort = InsertionSort("xlReversed.txt", 1000000, numbers);
-                insertionSort.doTheSort(numbers, numbers.size());
-                insertionSort.writeFile(numbers);
-            }
-            
-            //if user selects RANDOM
-            else if(fileProperty == 3){
-                InsertionSort insertionSort = InsertionSort("xlRandom.txt", 1000000, numbers);
-                insertionSort.doTheSort(numbers, numbers.size());
-                insertionSort.writeFile(numbers);
-            }
-            
-            //if user selects PARTIALLY SORTED
-            else{
-                InsertionSort insertionSort = InsertionSort("xlPSorted.txt", 1000000, numbers);
-                insertionSort.doTheSort(numbers, numbers.size());
-                insertionSort.writeFile(numbers);
-            }  
-        }
     }
 
     //if user selects MERGE SORT
@@ -283,37 +252,6 @@ int main() {
             }  
         }
         
-        //if user selects EXTRA LARGE FILE SIZE (1000000)
-        else if(textFileType == 4){
-            
-            //if user selects SORTED
-            if(fileProperty == 1){
-                MergeSort mergeSort = MergeSort("xlSorted.txt", 1000000, numbers);
-                mergeSort.doTheSort(numbers, numbers.size());
-                mergeSort.writeFile(numbers);
-            }
-            
-            //if user selects REVERSED
-            else if(fileProperty == 2){
-                MergeSort mergeSort = MergeSort("xlReversed.txt", 1000000, numbers);
-                mergeSort.doTheSort(numbers, numbers.size());
-                mergeSort.writeFile(numbers);
-            }
-            
-            //if user selects RANDOM
-            else if(fileProperty == 3){
-                MergeSort mergeSort = MergeSort("xlRandom.txt", 1000000, numbers);
-                mergeSort.doTheSort(numbers, numbers.size());
-                mergeSort.writeFile(numbers);
-            }
-            
-            //if user selects PARTIALLY SORTED
-            else{
-                MergeSort mergeSort = MergeSort("xlPSorted.txt", 1000000, numbers);
-                mergeSort.doTheSort(numbers, numbers.size());
-                mergeSort.writeFile(numbers);
-            }  
-        }
     }
     
     //if user selects QUICK SORT
@@ -427,42 +365,6 @@ int main() {
             }  
         }
         
-        //if user selects EXTRA LARGE FILE SIZE (1000000)
-        else if(textFileType == 4){
-            
-            //initialize hi for extra large
-            int hi = (1000000 - 1);
-            
-            //if user selects SORTED
-            if(fileProperty == 1){
-                QuickSort quickSort = QuickSort("xlSorted.txt", 1000000, numbers);
-                quickSort.doTheSort(numbers, lo, hi);
-                quickSort.writeFile(numbers);
-            }
-            
-            //if user selects REVERSED
-            else if(fileProperty == 2){
-                QuickSort quickSort = QuickSort("xlReversed.txt", 1000000, numbers);
-                quickSort.doTheSort(numbers, lo, hi);
-                quickSort.writeFile(numbers);
-            }
-            
-            //if user selects RANDOM
-            else if(fileProperty == 3){
-                QuickSort quickSort = QuickSort("xlRandom.txt", 1000000, numbers);
-                quickSort.doTheSort(numbers, lo, hi);
-                quickSort.writeFile(numbers);
-            }
-            
-            //change these else statements to if filePoperty == 4 so we cannot have extra numbers (create error message for
-            //numbers other than 1-4)
-            //if user selects PARTIALLY SORTED
-            else{
-                QuickSort quickSort = QuickSort("xlPSorted.txt", 1000000, numbers);
-                quickSort.doTheSort(numbers, lo, hi);
-                quickSort.writeFile(numbers);
-            }  
-        }
     }
     
     //if user selects COUNT SORT
@@ -564,37 +466,6 @@ int main() {
             }  
         }
         
-        //if user selects EXTRA LARGE FILE SIZE (1000000)
-        else if(textFileType == 4){
-            
-            //if user selects SORTED
-            if(fileProperty == 1){
-                CountSort countSort = CountSort("xlSorted.txt", 1000000, numbers);
-                countSort.doTheSort(numbers, numbers.size());
-                countSort.writeFile(numbers);
-            }
-            
-            //if user selects REVERSED
-            else if(fileProperty == 2){
-                CountSort countSort = CountSort("xlReversed.txt", 1000000, numbers);
-                countSort.doTheSort(numbers, numbers.size());
-                countSort.writeFile(numbers);
-            }
-            
-            //if user selects RANDOM
-            else if(fileProperty == 3){
-                CountSort countSort = CountSort("xlRandom.txt", 1000000, numbers);
-                countSort.doTheSort(numbers, numbers.size());
-                countSort.writeFile(numbers);
-            }
-            
-            //if user selects PARTIALLY SORTED
-            else{
-                CountSort countSort = CountSort("xlPSorted.txt", 1000000, numbers);
-                countSort.doTheSort(numbers, numbers.size());
-                countSort.writeFile(numbers);
-            }  
-        }
     }
     
     //stop time count

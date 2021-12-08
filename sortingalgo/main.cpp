@@ -15,7 +15,7 @@ int main() {
     //type of sorting algorithm
     int algorithmFileType;
     
-    //size of text file (1000, 10000, 100000, 1000000)
+    //size of text file (1000, 10000, 100000)
     int textFileType;
     
     //how the values in the text file are organized (sorted, reversed, random, partially sorted)

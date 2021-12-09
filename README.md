@@ -51,28 +51,28 @@ Example:
 Merge sort is a fast efficient, "divide and conquer" sorting algorithm type that splits lists up into seperate elements that will be organized in smaller lists, to only be combined as one that is sorted properly. This algorithm works is a "not in-place" one, meaning it utilizes separate storage spaces to complete the list it's sorting. This sorting algorithm is also very stable, and completes it's code with a time complexity of O(nlogn)
 
 Original Set:
-[4,2,7,5,3,1]
+   [4,2,7,5,3,1]
 
 List is seperated into two:
-[4,2,7] / [5,3,1]
+   [4,2,7] / [5,3,1]
 
 List is separated again:
-[4] [2,7] / [5] [3,1]
+   [4] [2,7] / [5] [3,1]
 
 List is separated once more:
-[4] [2] [7]  / [5] [3] [1]
+   [4] [2] [7]  / [5] [3] [1]
 
 The list now starts to combine in numerical order:
-[4] [2,7] / [5] [1,3]
+   [4] [2,7] / [5] [1,3]
 
 Code now implements numbers from their respective lists:
-[2,4,7] / [1,3,5]
+   [2,4,7] / [1,3,5]
 
 Each list sequentially adds number to a final sorted list:
-[1,2,3,4...]       Remaining: [7] / [5]
+   [1,2,3,4...]       Remaining: [7] / [5]
 
 List is now completed:
-[1,2,3,4,5,7]
+   [1,2,3,4,5,7]
 
 
 # Quick Sort

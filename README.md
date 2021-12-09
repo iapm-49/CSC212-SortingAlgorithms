@@ -26,70 +26,60 @@ When sorting an array of size n:
 3. If the element at index n is less than the element directly before it, continue to compare it to the elements before that one, until it is no longer smaller than the element it is being compared to.
 4. Move up the elements that were greater than the element at index n to make space for the element that was swapped.
 
-4 3 2 10 12 1 5 6
+Example:
 
-4 3 2 10 12 1 5 6
+   4 3 2 10 12 1 5 6
 
-3 4 2 10 12 1 5 6
+   4 3 2 10 12 1 5 6
 
-2 3 4 10 12 1 5 6
+   3 4 2 10 12 1 5 6
 
-2 3 4 10 12 1 5 6
+   2 3 4 10 12 1 5 6
 
-2 3 4 10 12 1 5 6
+   2 3 4 10 12 1 5 6
 
-1 2 3 4 10 12 5 6
+   2 3 4 10 12 1 5 6
 
-1 2 3 4 5 10 12 6
+   1 2 3 4 10 12 5 6
 
-1 2 3 4 5 6 10 12
+   1 2 3 4 5 10 12 6
 
-https://www.geeksforgeeks.org/insertion-sort/
+   1 2 3 4 5 6 10 12
 
 # Merge Sort
 
 # Quick Sort
 Often described as a "divide and conquer" algorithm, Quick Sort sorts the elements of a list by selecting a value in this list to be the "pivot" value. Most often, this pivot value is either the first or last element of the list, but realistically it could be any random number from the list. (For the sake of our project, we always selected the last element in the list to be our pivot value). 
+
 The goal of this pivot value is to put it at its correct position in the list and then partitioning the list into two parts: On the left of the pivot, a section of numbers less than the value of the pivot (not sorted yet). On the right of the pivot, a section of numbers greater than the value of the pivot (also not sorted yet).
-After this partition is made, both sides of the partition are sorted by using recursion, and setting the parameter for our high value equal to one less than the partition as well as one before the partition.
 
-arr[] = 10, 80, 30, 90, 40, 50, 70
-lo = 0, hi =  6, pivot = arr[hi] = 70
-Initialize index of smaller element, i = -1
+After this partition is made, both sides of the partition are sorted by using recursion by setting the parameter for our high value equal to one less than the partition as well as one before the partition.
 
-Traverse elements from j = lo to hi - 1
-j = 0 : Since arr[j] <= pivot, do i++ and swap(arr[i], arr[j])
-i = 0 
-arr[] = {10, 80, 30, 90, 40, 50, 70} // No change as i and j 
-                                     // are same
+Example:
 
-j = 1 : Since arr[j] > pivot, do nothing
-// No change in i and arr[]
+[15, 3, 9, 8, 5, 2, [7], 1, 6]
+- 7 is the pivot value, and our lo and hi pointers point to the values 15 and 6.
 
-j = 2 : Since arr[j] <= pivot, do i++ and swap(arr[i], arr[j])
-i = 1
-arr[] = {10, 30, 80, 90, 40, 50, 70} // We swap 80 and 30 
+[6, 3, 9, 8, 5, 2, [7], 1, 15]
+- The values 15 and 6 swap, after seeing that 15 > 7 and 6 < 15.
 
-j = 3 : Since arr[j] > pivot, do nothing
-// No change in i and arr[]
+[6, 3, 9, 8, 5, 2, [7], 1, 15]
+- We then continue to iterate from the left and find that 9 > 7. Iterating further from the right as well will lead us to seeing 1 < 7.
 
-j = 4 : Since arr[j] <= pivot, do i++ and swap(arr[i], arr[j])
-i = 2
-arr[] = {10, 30, 40, 90, 80, 50, 70} // 80 and 40 Swapped
-j = 5 : Since arr[j] <= pivot, do i++ and swap arr[i] with arr[j] 
-i = 3 
-arr[] = {10, 30, 40, 50, 80, 90, 70} // 90 and 50 Swapped 
+[6, 3, 1, 8, 5, 2, [7], 9, 15]
+- The values 9 and 1 swap.
 
-We come out of loop because j is now equal to high-1.
-Finally we place pivot at correct position by swapping
-arr[i+1] and arr[high] (or pivot) 
-arr[] = {10, 30, 40, 50, 70, 90, 80} // 80 and 70 Swapped 
+[6, 3, 1, 8, 5, 2, [7], 9, 15]
+- We can then see that 8 is the next value from the left that is greater than 7. From the right, we continue to move left to find the value 2, which is less than 7.
 
-Now 70 is at its correct place. All elements smaller than
-70 are before it and all elements greater than 70 are after
-it.
+[6, 3, 1, 2, 5, 8, [7], 9, 15]
+- The values 8 and 2 swap.
 
-https://www.geeksforgeeks.org/quick-sort/
+[6, 3, 1, 2, 5, 8, [7], 9, 15]
+- Now, the pointers from the left and right side have met in the middle, and the algorithm will now recursively sort each side of the list, which has been partitioned by the pivot value.
+
+[1, 2, 3, 5, 6, 7, 8, 9, 15]
+- After recursively sorting the list, this is the end result.
 
 # Count Sort
 Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (kind of hashing). Then doing some arithmetic to calculate the position of each object in the output sequence.
@@ -138,6 +128,7 @@ Here is a little explanation about how to run our program and what to expect whe
 
 # Downloads
    - First, you will need to download all of the files from our "sortingalgo" folder, which includes each of the .cpp and .h files for our four algorithms. You will also need to download each of the .txt files found in the "txtFiles" folder in order to run each unique combination of algorithms, text file sizes, and organization of values in the text files.
+   - Note: Make sure all of these files are in the same folder.
 
 # User Input
 1. Compile all of the .cpp files appropriately for your choice of IDE.
